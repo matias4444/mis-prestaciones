@@ -1,0 +1,1939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/windowbackgraund_claro"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_light1"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.MyApplication.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/Theme.MyApplication.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- TODO LOS COMPONENTES -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crdViw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            app:cardCornerRadius="8dp"
+            android:elevation="@dimen/cardview_default_elevation">
+
+
+           <!--  AQUI DINAMICO -->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <!--  aqui ponemos DINAMICO                      -->
+
+
+                <!-- aqui domicilio que cambia -->
+
+
+                <!--1 tarjeta-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/carVw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="12dp"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="@dimen/cardview_default_elevation">
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="100dp"
+                        android:text="Fallecido"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+
+                    <customfonts.EditTextRobotoRegular
+                        android:id="@+id/editTextTetrme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:maxLength="50"
+                        android:inputType="textMultiLine|textCapWords|textCapCharacters"
+                        android:textColor="@color/black_difuminado"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginStart="90dp"
+                        android:hint="Nombre" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/view_line"/>
+                </androidx.cardview.widget.CardView>
+
+                <!--2 nueva tarjeta -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardVw"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="12dp"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    app:cardCornerRadius="8dp">
+
+                    <customfonts.MyTextView_Roboto_Bold
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="Actual"
+                        android:textColor="@color/purple_700"
+                        android:textSize="12dp" />
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="100dp"
+                        android:text="Domicilio"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <customfonts.MyTextView_Roboto_Bold
+                        android:layout_width="97dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="0dp"
+                        android:gravity="center_vertical|center"
+                        android:text="Fallecido"
+                        android:textColor="@color/purple_700"
+                        android:textSize="12dp" />
+
+                    <customfonts.MyTextView_Roboto_Bold
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="7dp"
+                        android:gravity="center"
+                        android:text="Declarante"
+                        android:textColor="@color/purple_700"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_vertical"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/rd_domicilioFallecido"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/rd_si_difunto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Si"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/rd_no_difunto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="7dp"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/rdg_domicilioDeclarante"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="0dp"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/rd_si_declarante"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Si"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/rd_no_declarante"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/view_line" />
+                </androidx.cardview.widget.CardView>
+
+                <!--3 tarjeta-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/carVe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="12dp"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="@dimen/cardview_default_elevation">
+
+                    <customfonts.MyTextView_Roboto_Bold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Domicilio"
+                        android:textSize="12dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_gravity="top|left"
+                        android:gravity="center_vertical|center"
+                        android:textColor="@color/purple_700"/>
+                    <!--
+                     -->
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="100dp"
+                        android:text="Fallecido"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+
+                    <customfonts.EditTextRobotoRegular
+                        android:id="@+id/editTxtTCambioDomicilioFallecido"
+                        android:layout_width="270dp"
+                        android:layout_height="40dp"
+                        android:ems="10"
+                        android:textSize="16dp"
+                        android:inputType="textMultiLine|textCapWords"
+                        android:textColor="@color/black_difuminado"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:visibility="gone"
+                        android:hint="Direccion fallecido" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/view_line"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/carVe1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="2dp"
+                        android:visibility="gone"
+                        android:layout_marginRight="12dp"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="@dimen/cardview_default_elevation">
+
+                        <customfonts.MyTextView_Roboto_Bold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Domicilio"
+                            android:textSize="12dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginStart="14dp"
+                            android:layout_gravity="top|left"
+                            android:gravity="center_vertical|center"
+                            android:textColor="@color/purple_700"/>
+                        <!--
+                         -->
+                        <customfonts.MyTextView_Roboto_Regular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginEnd="100dp"
+                            android:text="Declarante"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+
+                        <customfonts.EditTextRobotoRegular
+                            android:id="@+id/editTxtTCambioDomicilio"
+                            android:layout_width="270dp"
+                            android:layout_height="40dp"
+                            android:ems="10"
+                            android:textSize="16dp"
+                            android:inputType="textMultiLine|textCapWords"
+                            android:textColor="@color/black_difuminado"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:visibility="gone"
+                            android:hint="Direccion declarante" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/view_line"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                <!-- 4 tarjeta -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/caVw"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="12dp"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="@dimen/cardview_default_elevation">
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/ic_baseline_call_24"
+                        android:textSize="18dp"/>
+
+                    <customfonts.EditTextRobotoRegular
+                        android:id="@+id/editTetName"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:maxLength="9"
+                        android:inputType="textPersonName|textCapCharacters|number"
+                        android:textColor="@color/black_difuminado"
+                        android:layout_gravity="bottom|center_horizontal|left"
+                        android:layout_marginStart="30dp"
+                        android:gravity="left"
+                        android:hint="" />
+
+                    <!--<customfonts.MyTextView_Roboto_Regular
+                        android:id="@+id/editTexexeName"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:background="@drawable/ic_baseline_mail_outline_24"
+                        android:textSize="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/black_difuminado"
+                        android:layout_gravity="left|center"
+                        android:layout_marginStart="120dp" />-->
+
+                    <customfonts.EditTextRobotoRegular
+                        android:id="@+id/editTexexteName"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:maxLength="30"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black_difuminado"
+                        android:layout_gravity="center_vertical|right|bottom"
+                        android:layout_marginEnd="4dp"
+                        android:hint=""/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/view_line"/>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- 5 tarjeta -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/carView"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="12dp"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="@dimen/cardview_default_elevation">
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="Libro de Firma"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="7dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/raio_irate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Si"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/raio_nnja"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/view_line"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <!--6 tarjeta-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/carViw"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="12dp"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="@dimen/cardview_default_elevation">
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="100dp"
+                        android:text="Justificante"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+
+                    <customfonts.EditTextRobotoRegular
+                        android:id="@+id/editTextTetrName"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:ems="10"
+                        android:textSize="16dp"
+                        android:maxLength="2"
+                        android:inputType="textPersonName|textCapCharacters|number"
+                        android:textColor="@color/black_difuminado"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginEnd="4dp"
+                        android:gravity="center"
+                        android:hint="Uds." />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/view_line"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 7 tarjeta -->
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="12dp"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    app:cardCornerRadius="8dp">
+
+                    <customfonts.MyTextView_Roboto_Bold
+                        android:layout_width="97dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center"
+                        android:text="Sala Preparacion"
+                        android:textColor="@color/purple_700"
+                        android:textSize="12dp" />
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="100dp"
+                        android:text="Acondicionad"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_vertical"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/radio_pirate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Si"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/radio_ninja"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="7dp"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/raio_pirate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Si"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/raio_ninja"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/view_line" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!--8 CORONAS FLORES-->
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginTop="2dp">
+
+                <customfonts.MyTextView_Roboto_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:text="Coronas"
+                    android:textSize="18dp"/>
+
+                <customfonts.EditTextRobotoRegular
+                    android:id="@+id/editTextTextPeronName"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:textColor="@color/black_difuminado"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginStart="34dp"
+                    android:inputType="textPersonName|number"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:hint="" />
+
+                <customfonts.MyTextView_Roboto_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="20dp"
+                    android:layout_gravity="center_vertical|center"
+                    android:textStyle="bold"
+                    android:text="Centro"
+                    android:textSize="18dp"/>
+
+                <customfonts.EditTextRobotoRegular
+                    android:id="@+id/editTextTextPeonName"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:textColor="@color/black_difuminado"
+                    android:layout_gravity="center_horizontal|left"
+                    android:layout_marginStart="79dp"
+                    android:inputType="textPersonName|number"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:hint="" />
+
+                <customfonts.MyTextView_Roboto_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="51dp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical|right"
+                    android:textStyle="bold"
+                    android:text="Canasto"
+                    android:textSize="18dp"/>
+
+                <customfonts.EditTextRobotoRegular
+                    android:id="@+id/editTextTextPeoName"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:inputType="textPersonName|number"
+                    android:textColor="@color/black_difuminado"
+                    android:layout_gravity="center_horizontal|right"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:hint="" />
+            </androidx.cardview.widget.CardView>
+
+
+
+                <customfonts.EditTextRobotoRegular
+                    android:id="@+id/editTxtTexteName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="16dp"
+                    android:inputType="textMultiLine|textCapWords"
+                    android:textColor="@color/black_difuminado"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:hint="Texto 1" />
+
+                <customfonts.EditTextRobotoRegular
+                    android:id="@+id/editTextTexterame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="16dp"
+                    android:inputType="textMultiLine|textCapWords"
+                    android:textColor="@color/black_difuminado"
+                    android:layout_gravity="center_vertical|center"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:hint="Texto 2" />
+
+
+
+                <!-- aqui los chip complemnetos -->
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/carVie2"
+                        android:layout_width="362dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginTop="2dp">
+                        <!--
+                         -->
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/idGrupoChip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:visibility="gone"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/view_line"/>
+                    </androidx.cardview.widget.CardView>
+                    <!-- aqui otro concepto  -->
+
+
+
+
+
+                <!--_ aqui otros concepto   -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardiew"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="12dp"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    app:cardCornerRadius="8dp">
+
+                    <customfonts.MyTextView_Roboto_Bold
+                        android:layout_width="128dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="Tipo"
+                        android:textColor="@color/purple_700"
+                        android:textSize="12dp" />
+
+                    <customfonts.MyTextView_Roboto_Bold
+                        android:id="@+id/id_fechaCatering"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_horizontal"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="4dp"
+                        android:gravity="center"
+                        android:text="Hora"
+                        android:textColor="@color/purple_700"
+                        android:textSize="12dp" />
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="100dp"
+                        android:text="Catering"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <customfonts.EditTextRobotoRegular
+                        android:id="@+id/editTexTtrName"
+                        android:layout_width="128dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|center_horizontal|bottom"
+                        android:layout_marginTop="5dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Provincial/Ticket"
+                        android:inputType="textPersonName|textCapWords"
+                        android:maxLength="10"
+                        android:textColor="@color/black_difuminado"
+                        android:textSize="16dp" />
+
+                    <customfonts.EditTextRobotoRegular
+                        android:id="@+id/editTextHoraCatering"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical|right|bottom"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="4dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint=":"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black_difuminado"
+                        android:textSize="16dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/view_line" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- tarjeta de inhumacion e incineracion -ScrollHorizontal -->
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:scrollbars="none">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- aqui  1 tarjeta-->
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+<!-- aqui primer Carview incineracion-->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cardi"
+                                        android:layout_width="345dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginRight="12dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginBottom="2dp"
+                                        android:elevation="@dimen/cardview_default_elevation"
+                                        app:cardCornerRadius="8dp">
+
+
+                                        <customfonts.MyTextView_Roboto_Regular
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical|bottom"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginEnd="100dp"
+                                            android:layout_marginBottom="6dp"
+                                            android:text="Sala"
+                                            android:textColor="@color/black"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:id="@+id/tvFechaEntradaSala1"
+                                            android:layout_width="128dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_marginTop="4dp"
+                                            android:gravity="center"
+                                            android:text="Entrada"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/edtHoraEntradaSala1"
+                                            android:layout_width="60dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="bottom|center_horizontal"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint=":"
+                                            android:inputType="textPersonName|textCapCharacters"
+
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal|right"
+                                            android:layout_marginTop="4dp"
+                                            android:layout_marginEnd="4dp"
+                                            android:gravity="center"
+                                            android:text="Sala"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editTNumroSala1"
+                                            android:layout_width="65dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="bottom|center_vertical|right"
+                                            android:layout_marginEnd="4dp"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint="Numero"
+                                            android:inputType="textPersonName|textCapCharacters|number"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.5dp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@color/view_line" />
+                                    </androidx.cardview.widget.CardView>
+
+
+                                    <!--  aqui otra tarjeta  -->
+
+                                    <!-- nueva tarjeta  aqui-->
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cr22Vw"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="12dp"
+                                        android:elevation="@dimen/cardview_default_elevation"
+                                        app:cardCornerRadius="8dp">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:id="@+id/id_entrda_saa"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Pago"
+                                            android:textSize="12dp"
+                                            android:layout_marginTop="4dp"
+                                            android:gravity="center"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_gravity="left|center_horizontal"
+                                            android:textColor="@color/purple_700"/>
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:id="@+id/id_entrad_sa"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Parroquial"
+                                            android:textSize="12dp"
+                                            android:gravity="center"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_gravity="left|center_horizontal"
+                                            android:textColor="@color/purple_700"/>
+                                        </LinearLayout>
+
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editTtTexeName"
+                                            android:layout_width="270dp"
+                                            android:layout_height="35dp"
+                                            android:ems="10"
+                                            android:textSize="14dp"
+                                            android:inputType="textCapWords"
+                                            android:textColor="@color/black_difuminado"
+                                            android:layout_gravity="top|center_vertical|right"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_marginEnd="4dp"
+                                            android:layout_marginStart="10dp"
+                                            android:hint="Parroquia" />
+
+                                        <customfonts.MyTextView_Roboto_Regular
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical|bottom"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginEnd="100dp"
+                                            android:layout_marginBottom="6dp"
+                                            android:text="Misa"
+                                            android:textColor="@color/black"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+<!--
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:layout_width="97dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:layout_marginStart="58dp"
+                                            android:layout_marginTop="2dp"
+                                            android:gravity="center"
+                                            android:text="Pago Parroquial"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginStart="58dp"
+                                            android:layout_marginTop="8dp"
+                                            android:orientation="vertical">
+
+                                            <RadioGroup
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal">
+
+                                                <androidx.appcompat.widget.AppCompatRadioButton
+                                                    android:id="@+id/radio_pirat"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Si"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14dp" />
+
+                                                <androidx.appcompat.widget.AppCompatRadioButton
+                                                    android:id="@+id/radio_ninj"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="No"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14dp" />
+                                            </RadioGroup>
+                                        </LinearLayout>
+                                        -->
+
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editTetame"
+                                            android:layout_width="210dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="bottom|right"
+                                            android:layout_marginEnd="68dp"
+                                            android:ems="1"
+                                            android:gravity="left"
+                                            android:hint="Capilla/Localidad"
+                                            android:inputType="textPersonName|textCapWords"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:id="@+id/id_fecaCateing"
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="right|center_horizontal"
+                                            android:layout_marginTop="34dp"
+                                            android:layout_marginEnd="4dp"
+                                            android:gravity="center"
+                                            android:text="Hora"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/edtMisaHora1"
+                                            android:layout_width="60dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center_horizontal|right|bottom"
+                                            android:layout_marginEnd="4dp"
+                                            android:clickable="false"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint=":"
+                                            android:inputType="textPersonName|textCapCharacters"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.5dp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@color/view_line" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/crV44i"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_marginRight="12dp"
+                                        android:layout_marginBottom="2dp"
+                                        android:elevation="@dimen/cardview_default_elevation"
+                                        app:cardCornerRadius="8dp">
+
+                                        <com.google.android.material.chip.ChipGroup
+                                            android:id="@+id/idGrupoChipAprtura"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:visibility="gone" />
+
+                                        <customfonts.MyTextView_Roboto_Regular
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginEnd="100dp"
+                                            android:text="Incineracion"
+                                            android:textColor="@android:color/holo_red_light"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editHoraIncineracion"
+                                            android:layout_width="60dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center_vertical|center|bottom"
+                                            android:layout_marginEnd="42dp"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint=":"
+                                            android:inputType="textPersonName|textCapCharacters"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:id="@+id/idFechaCremacion"
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top|center"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_marginEnd="42dp"
+                                            android:gravity="center"
+                                            android:text="Hora"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:layout_width="82dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top|right"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_marginEnd="112dp"
+                                            android:gravity="center"
+                                            android:text="Urna"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editTUrnaModelo"
+                                            android:layout_width="84dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center_vertical|center|bottom"
+                                            android:layout_marginStart="28dp"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint="Modelo"
+                                            android:inputType="textPersonName|textCapWords"
+                                            android:maxLength="9"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top|right"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_marginEnd="8dp"
+                                            android:gravity="center_vertical|right"
+                                            android:text="Entrega de Cenizas"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="right|center_vertical"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginEnd="7dp"
+                                            android:orientation="vertical">
+
+                                            <RadioGroup
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal">
+
+
+                                                <androidx.appcompat.widget.AppCompatRadioButton
+                                                    android:id="@+id/raio_si_Entrega"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Si"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14dp" />
+
+
+                                                <androidx.appcompat.widget.AppCompatRadioButton
+                                                    android:id="@+id/raio_no_Entrega"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginEnd="7dp"
+                                                    android:text="No"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14dp" />
+                                            </RadioGroup>
+
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.5dp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@color/view_line" />
+                                    </androidx.cardview.widget.CardView>
+                                </LinearLayout>
+                            </FrameLayout>
+
+                            <!-- aqui otra tarjeta -->
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <!-- aqui el 2º CardView-->
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:orientation="vertical">
+
+
+                                    <!--  aqui otra tarjeta  -->
+
+                                    <!-- nueva tarjeta  aqui-->
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cardiw"
+                                        android:layout_width="345dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="12dp"
+                                        android:layout_marginBottom="2dp"
+                                        android:elevation="@dimen/cardview_default_elevation"
+                                        app:cardCornerRadius="8dp">
+
+
+                                        <customfonts.MyTextView_Roboto_Regular
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical|bottom"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginEnd="100dp"
+                                            android:layout_marginBottom="6dp"
+                                            android:text="Sala"
+                                            android:textColor="@color/black"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:id="@+id/tvFechaEntradaSala2"
+                                            android:layout_width="128dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_marginTop="4dp"
+                                            android:gravity="center"
+                                            android:text="Entrada"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editEntradaSala2"
+                                            android:layout_width="60dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="bottom|center_horizontal"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint=":"
+                                            android:inputType="textPersonName|textCapCharacters"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal|right"
+                                            android:layout_marginTop="4dp"
+                                            android:layout_marginEnd="4dp"
+                                            android:gravity="center"
+                                            android:text="Sala"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editTNumeroSala2"
+                                            android:layout_width="65dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="bottom|center_vertical|right"
+                                            android:layout_marginEnd="4dp"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint="Numero"
+                                            android:inputType="textPersonName|textCapCharacters|number"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.5dp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@color/view_line" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cr22Viw"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="12dp"
+                                        android:elevation="@dimen/cardview_default_elevation"
+                                        app:cardCornerRadius="8dp">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                            <customfonts.MyTextView_Roboto_Bold
+                                                android:id="@+id/id_entrada_saa"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Pago"
+                                                android:textSize="12dp"
+                                                android:layout_marginTop="4dp"
+                                                android:gravity="center"
+                                                android:layout_marginStart="10dp"
+                                                android:layout_gravity="left|center_horizontal"
+                                                android:textColor="@color/purple_700"/>
+                                            <customfonts.MyTextView_Roboto_Bold
+                                                android:id="@+id/id_entrad_saa"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Parroquial"
+                                                android:textSize="14dp"
+                                                android:gravity="center"
+                                                android:layout_marginStart="10dp"
+                                                android:layout_gravity="left|center_horizontal"
+                                                android:textColor="@color/purple_700"/>
+                                        </LinearLayout>
+
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editTtTexteName"
+                                            android:layout_width="275dp"
+                                            android:layout_height="35dp"
+                                            android:ems="10"
+                                            android:textSize="14dp"
+                                            android:inputType="textCapWords"
+                                            android:textColor="@color/black_difuminado"
+                                            android:layout_gravity="top|center_vertical|right"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_marginEnd="4dp"
+                                            android:layout_marginStart="10dp"
+                                            android:hint="Parroquia" />
+
+                                        <customfonts.MyTextView_Roboto_Regular
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical|bottom"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginEnd="100dp"
+                                            android:layout_marginBottom="6dp"
+                                            android:text="Misa"
+                                            android:textColor="@color/black"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+                                        <!--
+                                                                                <customfonts.MyTextView_Roboto_Bold
+                                                                                    android:layout_width="97dp"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:layout_gravity="top"
+                                                                                    android:layout_marginStart="58dp"
+                                                                                    android:layout_marginTop="2dp"
+                                                                                    android:gravity="center"
+                                                                                    android:text="Pago Parroquial"
+                                                                                    android:textColor="@color/purple_700"
+                                                                                    android:textSize="12dp" />
+
+                                                                                <LinearLayout
+                                                                                    android:layout_width="wrap_content"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:layout_gravity="center_vertical"
+                                                                                    android:layout_marginStart="58dp"
+                                                                                    android:layout_marginTop="8dp"
+                                                                                    android:orientation="vertical">
+
+                                                                                    <RadioGroup
+                                                                                        android:layout_width="wrap_content"
+                                                                                        android:layout_height="wrap_content"
+                                                                                        android:orientation="horizontal">
+
+                                                                                        <androidx.appcompat.widget.AppCompatRadioButton
+                                                                                            android:id="@+id/radio_pirat"
+                                                                                            android:layout_width="wrap_content"
+                                                                                            android:layout_height="wrap_content"
+                                                                                            android:text="Si"
+                                                                                            android:textColor="@color/black"
+                                                                                            android:textSize="14dp" />
+
+                                                                                        <androidx.appcompat.widget.AppCompatRadioButton
+                                                                                            android:id="@+id/radio_ninj"
+                                                                                            android:layout_width="wrap_content"
+                                                                                            android:layout_height="wrap_content"
+                                                                                            android:text="No"
+                                                                                            android:textColor="@color/black"
+                                                                                            android:textSize="14dp" />
+                                                                                    </RadioGroup>
+                                                                                </LinearLayout>
+                                                                                -->
+
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editTeetame"
+                                            android:layout_width="210dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="bottom|right"
+                                            android:layout_marginEnd="68dp"
+                                            android:ems="1"
+                                            android:gravity="left"
+                                            android:hint="Capilla/Localidad"
+                                            android:inputType="textPersonName|textCapWords"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:id="@+id/id_fecaCatering"
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="right|center_horizontal"
+                                            android:layout_marginTop="34dp"
+                                            android:layout_marginEnd="4dp"
+                                            android:gravity="center"
+                                            android:text="Hora"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editMisaHora2"
+                                            android:layout_width="60dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center_horizontal|right|bottom"
+                                            android:layout_marginEnd="4dp"
+                                            android:clickable="false"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint=":"
+                                            android:inputType="textPersonName|textCapCharacters"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.5dp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@color/view_line" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/crV44iw"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_marginRight="12dp"
+                                        android:layout_marginBottom="2dp"
+                                        android:elevation="@dimen/cardview_default_elevation"
+                                        app:cardCornerRadius="8dp">
+
+                                        <com.google.android.material.chip.ChipGroup
+                                            android:id="@+id/idGrupoChipApertura"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:visibility="gone" />
+
+                                        <customfonts.MyTextView_Roboto_Regular
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginEnd="100dp"
+                                            android:text="Inhumación"
+                                            android:textColor="@android:color/holo_green_dark"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+
+
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:layout_width="170dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top|center"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_marginStart="28dp"
+                                            android:gravity="center"
+                                            android:text="Localidad"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editTetTet8Name"
+                                            android:layout_width="170dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center_vertical|center|bottom"
+                                            android:layout_marginStart="28dp"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint="Cementerio"
+                                            android:inputType="textPersonName|textCapWords"
+                                            android:maxLength="9"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:id="@+id/tvFechaInhumacion"
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top|right"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_marginEnd="4dp"
+                                            android:gravity="center"
+                                            android:text="Hora"
+                                            android:textColor="@color/purple_700"
+                                            android:textSize="12dp" />
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editHoraInhumacion"
+                                            android:layout_width="60dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center_vertical|right|bottom"
+                                            android:layout_marginEnd="4dp"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint=":"
+                                            android:inputType="textPersonName|textCapCharacters"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.5dp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@color/view_line" />
+                                    </androidx.cardview.widget.CardView>
+                                </LinearLayout>
+                            </FrameLayout>
+
+
+
+                            <!-- nueva tarjeta de traslado -->
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:orientation="vertical">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/ci66w"
+                                        android:layout_width="345dp"
+                                        android:layout_height="52dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginRight="12dp"
+                                        app:cardCornerRadius="8dp"
+                                        android:elevation="@dimen/cardview_default_elevation">
+
+
+                                        <customfonts.MyTextView_Roboto_Regular
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical|bottom"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginEnd="100dp"
+                                            android:layout_marginBottom="6dp"
+                                            android:text="Sala"
+                                            android:textColor="@color/black"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:id="@+id/tvFechaEntradaSala3"
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Entrada"
+                                            android:textSize="12dp"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_marginEnd="4dp"
+                                            android:gravity="center"
+                                            android:layout_gravity="top|center_horizontal"
+                                            android:textColor="@color/purple_700"/>
+
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editHoraHoraSala3"
+                                            android:layout_width="60dp"
+                                            android:layout_height="40dp"
+                                            android:ems="10"
+                                            android:textSize="16dp"
+                                            android:inputType="textPersonName|textCapCharacters|number"
+                                            android:textColor="@color/black_difuminado"
+                                            android:layout_gravity="bottom|center_horizontal"
+                                            android:layout_marginEnd="4dp"
+                                            android:gravity="center"
+                                            android:hint=":" />
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Sala"
+                                            android:textSize="12dp"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_marginEnd="4dp"
+                                            android:gravity="center"
+                                            android:layout_gravity="top|center_vertical|right"
+                                            android:textColor="@color/purple_700"/>
+
+
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editTNumeroSala3"
+                                            android:layout_width="80dp"
+                                            android:layout_height="40dp"
+                                            android:ems="10"
+                                            android:textSize="16dp"
+                                            android:inputType="textPersonName|textCapCharacters|number"
+                                            android:textColor="@color/black_difuminado"
+                                            android:layout_gravity="bottom|center_vertical|right"
+                                            android:layout_marginEnd="4dp"
+                                            android:gravity="center"
+                                            android:hint="Numero" />
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.5dp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@color/view_line"/>
+                                    </androidx.cardview.widget.CardView>
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cr22iw"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="52dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_marginRight="12dp"
+                                        android:elevation="@dimen/cardview_default_elevation"
+                                        app:cardCornerRadius="8dp">
+
+                                        <customfonts.MyTextView_Roboto_Regular
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginEnd="100dp"
+                                            android:text="Misa"
+                                            android:textColor="@color/black"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editCapilla"
+                                            android:layout_width="160dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="bottom|center_horizontal"
+                                            android:layout_marginEnd="4dp"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint="Capilla/Parroquia"
+                                            android:inputType="textPersonName|textCapWords"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/MisaHora3"
+                                            android:layout_width="60dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center_horizontal|right|bottom"
+                                            android:layout_marginEnd="4dp"
+                                            android:ems="10"
+                                            android:gravity="center"
+                                            android:hint=":"
+                                            android:inputType="textPersonName|textCapCharacters|number"
+                                            android:textColor="@color/black_difuminado"
+                                            android:textSize="16dp" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.5dp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@color/view_line" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/crV4w"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="52dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginRight="12dp"
+                                        android:layout_marginBottom="4dp"
+                                        android:layout_marginTop="2dp"
+                                        app:cardCornerRadius="8dp"
+                                        android:elevation="@dimen/cardview_default_elevation">
+
+                                        <customfonts.MyTextView_Roboto_Regular
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginEnd="100dp"
+                                            android:text="Traslado"
+                                            android:textColor="@color/black"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editHoraSalidaTraslado"
+                                            android:layout_width="60dp"
+                                            android:layout_height="40dp"
+                                            android:ems="10"
+                                            android:textSize="16dp"
+                                            android:inputType="textPersonName|textCapCharacters|number"
+                                            android:textColor="@color/black_difuminado"
+                                            android:layout_gravity="center_vertical|center|bottom"
+                                            android:layout_marginEnd="35dp"
+                                            android:gravity="center"
+                                            android:hint=":" />
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:id="@+id/tvFechaTraslado"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Salida Aprox."
+                                            android:layout_marginEnd="34dp"
+                                            android:layout_marginTop="2dp"
+                                            android:textSize="12dp"
+                                            android:layout_gravity="top|center"
+                                            android:gravity="center_vertical|right"
+                                            android:textColor="@color/purple_700"/>
+
+
+                                        <customfonts.MyTextView_Roboto_Bold
+                                            android:layout_width="160dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Traslado"
+                                            android:layout_marginEnd="4dp"
+                                            android:layout_marginTop="2dp"
+                                            android:textSize="12dp"
+                                            android:layout_gravity="top|right"
+                                            android:gravity="center"
+                                            android:textColor="@color/purple_700"/>
+
+                                        <customfonts.EditTextRobotoRegular
+                                            android:id="@+id/editTme"
+                                            android:layout_width="160dp"
+                                            android:layout_height="40dp"
+                                            android:ems="10"
+                                            android:textSize="16dp"
+                                            android:inputType="textPersonName|textCapWords"
+                                            android:textColor="@color/black_difuminado"
+                                            android:layout_gravity="bottom|center_horizontal|right"
+                                            android:layout_marginEnd="4dp"
+                                            android:layout_marginStart="10dp"
+                                            android:gravity="center"
+                                            android:hint="Cementerio" />
+
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.5dp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@color/view_line"/>
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+                            </FrameLayout>
+
+                        </LinearLayout>
+                    </FrameLayout>
+                </HorizontalScrollView>
+
+                <!-- aqui................................................-->
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cr4iw"
+                    android:layout_width="362dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="@dimen/cardview_default_elevation">
+
+                    <customfonts.EditTextRobotoRegular
+                        android:id="@+id/editPrestaciones"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:textSize="16dp"
+                        android:inputType="text"
+                        android:textColor="@color/black_difuminado"
+                        android:layout_gravity="top|center"
+                        android:hint="Busca PRESTACIONES"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginBottom="4dp"
+                        android:scrollbars="vertical"/>
+
+
+                    <customfonts.MyTextView_Roboto_Bold
+                        android:id="@+id/profile_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="100dp"
+                        android:text="Prestaciones"
+                        android:textColor="@color/purple_700"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</ScrollView>

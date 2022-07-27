@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.3494791666666667" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3494791666666667" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/layout/activity_main.xml" value="0.4403874813710879" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/layout/content_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/layout/fragment_first.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/layout/fragment_second.xml" value="0.5" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/layout/item_layout.xml" value="0.33" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/layout/prueba.xml" value="0.4035433070866142" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/layout/prueba2.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/layout/prueba3.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/layout/prueba4.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/matia/MyApplication4/app/src/main/res/menu/menu_main.xml" value="0.3333333333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.4035433070866142" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

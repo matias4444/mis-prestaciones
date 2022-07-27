@@ -1,0 +1,47 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.myapplication.MainActivity">
+
+    <group android:checkableBehavior="none">
+
+    <item
+        android:id="@+id/idTaxis"
+        android:title="@string/taxi"
+        app:showAsAction="never"/>
+
+        <item
+            android:id="@+id/idRecordatorio"
+            android:title="@string/recordatorio"
+            app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/idconjuntaCremacion"
+        android:orderInCategory="100"
+        android:title="@string/cremacion_conjunta"
+        app:showAsAction="never" />
+
+        <item
+            android:id="@+id/idMarcapaso"
+            android:orderInCategory="100"
+            android:title="@string/marcapaso"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/idCremacionMiembro"
+            android:orderInCategory="100"
+            android:title="@string/miembro"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/idToqueCampana"
+            android:orderInCategory="100"
+            android:title="@string/toque_campana"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/idApertura"
+            android:orderInCategory="100"
+            android:title="@string/apertura"
+            app:showAsAction="never" />
+    </group>
+
+</menu>
