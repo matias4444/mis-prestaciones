@@ -14,7 +14,7 @@
 <!-- mis prestaciones con CHIPS -->
     <string-array name="Prestaciones">
         <item>recordatorio</item>
-        <item>taxi</item>
+        <item>taxis</item>
         <item>------------</item>
         <item>arca mejorada</item>
         <item>------------</item>
