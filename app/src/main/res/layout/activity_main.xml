@@ -452,7 +452,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="20dp"
-                        android:text="Libro de Firma"
+                        android:text="Libro de Firma actual"
                         android:textColor="@color/black"
                         android:textSize="18dp"
                         android:textStyle="bold" />
