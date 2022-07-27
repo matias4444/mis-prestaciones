@@ -452,7 +452,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="20dp"
-                        android:text="Libro de MATIAS"
+                        android:text="Libro de firma"
                         android:textColor="@color/black"
                         android:textSize="18dp"
                         android:textStyle="bold" />
@@ -517,7 +517,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="100dp"
-                        android:text="Justificante"
+                        android:text="Justificante Matias"
                         android:textColor="@color/black"
                         android:textSize="18dp"
                         android:textStyle="bold" />
